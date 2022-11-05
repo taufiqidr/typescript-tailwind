@@ -1,20 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="sm:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="main.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Learning Typescript + Tailwind</title>
   </head>
-  <body class="min-h-screen grid place-content-center bg-gray-700">
-    <div
-      class="bg-emerald-500 w-52 h-52 rounded-full grid place-content-center"
-    >
-      <div
-        class="bg-white w-11 h-11 rounded-full grid place-content-center"
-      ></div>
-    </div>
+  <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+    <header class="sticky top-0 z-10 bg-teal-700 text-white">
+      <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+        <h1 class="text-3xl font-medium">
+          <a href="#hero">💀 Gacha Result</a>
+        </h1>
+        <div>
+          <button
+            id="mobile-open-button"
+            class="text-3xl focus:outline-none sm:hidden"
+          >
+            &#9776;
+          </button>
+          <nav class="hidden space-x-8 text-xl sm:block" aria-label="main">
+            <a href="#skulls" class="hover:opacity-90">My Result</a>
+            <a href="#testimonial" class="hover:opacity-90">Testimonial</a>
+            <a href="#contact" class="hover:opacity-90">Contact</a>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main class="mx-auto max-w-4xl">
+      <section
+        id="hero"
+        class="mb-12 flex scroll-mt-40 flex-col-reverse items-center gap-8 p-6 sm:flex-row"
+      >
+        <article class="sm:w-1/2">
+          <h2
+            class="max-w-md text-center text-5xl font-bold text-slate-900 dark:text-white sm:text-left"
+          >
+            Lorem ipsum,
+            <span class="text-indigo-700 dark:text-indigo-300"
+              >dolor sit amet </span
+            >consectetur adipisicing elit.
+          </h2>
+          <p
+            class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+            minima placeat, vitae libero maiores consequuntur iste!
+          </p>
+          <p
+            class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left"
+          >
+            Lorem, ipsum dolor.
+          </p>
+        </article>
+        <img src="./img/cyno.png" alt="cyno" class="w-1/2" />
+      </section>
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+      <section class="my-12 scroll-mt-20 p-6" id="skulls">
+        <h2
+          class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
+        >
+          My Gacha
+        </h2>
+        <ul
+          class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row"
+        >
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6"
+          >
+            <img src="./img/tighnari.png" alt="tighnari" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Tighnari
+            </h3>
+            <p
+              class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block"
+            >
+              $
+            </p>
+            <p
+              class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden"
+            >
+              Affordable
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6"
+          >
+            <img src="./img/jean.png" alt="jean" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Jean
+            </h3>
+            <p
+              class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block"
+            >
+              $$
+            </p>
+            <p
+              class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden"
+            >
+              Best Selling!
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6"
+          >
+            <img src="./img/ganyu.png" alt="ganyu" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Ganyu
+            </h3>
+            <p
+              class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block"
+            >
+              $$$
+            </p>
+            <p
+              class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden"
+            >
+              Luxury Starship
+            </p>
+          </li>
+        </ul>
+      </section>
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+
+      <section class="my-12 scroll-mt-20 p-6" id="testimonial">
+        <h2
+          class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
+        >
+          My Testimonial
+        </h2>
+        <figure class="my-12">
+          <blockquote
+            class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black"
+          >
+            <p
+              class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero,
+              maiores? Enim voluptate, natus quo ab necessitatibus aperiam quae
+              consequuntur quaerat sunt, voluptatibus incidunt at impedit?
+            </p>
+          </blockquote>
+          <figcaption
+            class="mt-2 text-right text-xl text-slate-500 dark:text-slate-400 sm:text-2xl"
+          >
+            &#8212; Collei Zuker Uker
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote
+            class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black"
+          >
+            <p
+              class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero,
+              maiores? <span class="italic">Enim voluptate,</span> natus quo ab
+              necessitatibus aperiam quae consequuntur quaerat sunt,
+              voluptatibus incidunt at impedit?
+            </p>
+          </blockquote>
+          <figcaption
+            class="mt-2 text-right text-xl text-slate-500 dark:text-slate-400 sm:text-2xl"
+          >
+            &#8212; Gore Oreg Oreg
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote
+            class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black"
+          >
+            <p
+              class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl"
+            >
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero,
+              maiores? <span class="italic">Enim voluptate,</span> natus quo ab
+              necessitatibus aperiam quae consequuntur quaerat sunt,
+              voluptatibus incidunt at impedit?
+            </p>
+          </blockquote>
+          <figcaption
+            class="mt-2 text-right text-xl text-slate-500 dark:text-slate-400 sm:text-2xl"
+          >
+            &#8212; Gwara Gwara Bol D
+          </figcaption>
+        </figure>
+      </section>
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+
+      <section class="my-12 scroll-mt-16 p-6" id="contact">
+        <h2
+          class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
+        >
+          My Contact
+        </h2>
+        <form
+          action=""
+          class="mx-auto flex max-w-4xl flex-col items-start gap-4 text-2xl sm:text-3xl"
+        >
+          <label for="subject">Subject:</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            minlength="3"
+            maxlength="60"
+            placeholder="Your Subject"
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
+          />
+        </form>
+      </section>
+    </main>
   </body>
 </html>
