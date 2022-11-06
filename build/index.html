@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
     <title>Learning Typescript + Tailwind</title>
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
@@ -15,23 +16,54 @@
         </h1>
         <div>
           <button
-            id="mobile-open-button"
-            class="text-3xl focus:outline-none sm:hidden"
+            id="hamburger-button"
+            class="relative h-8 w-8 cursor-pointer text-3xl md:hidden"
           >
-            &#9776;
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"
+            ></div>
+            <!-- &#9776; -->
           </button>
-          <nav class="hidden space-x-8 text-xl sm:block" aria-label="main">
+          <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
             <a href="#skulls" class="hover:opacity-90">My Result</a>
             <a href="#testimonial" class="hover:opacity-90">Testimonial</a>
             <a href="#contact" class="hover:opacity-90">Contact</a>
           </nav>
         </div>
       </section>
+      <section
+        id="mobile-menu"
+        class="justify-content-center top-68 absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl"
+      >
+        <!-- <button class="self-end px-6 text-8xl">&times;</button> -->
+        <nav
+          class="flex min-h-screen flex-col items-center py-8"
+          aria-label="mobile"
+        >
+          <a href="#hero" class="w-full py-6 text-center hover:opacity-90"
+            >Home</a
+          >
+          <a href="#skulls" class="w-full py-6 text-center hover:opacity-90"
+            >My Result</a
+          >
+          <a
+            href="#testimonial"
+            class="w-full py-6 text-center hover:opacity-90"
+            >Testimonial</a
+          >
+          <a href="#contact" class="w-full py-6 text-center hover:opacity-90"
+            >Contact</a
+          >
+          <a href="#footer" class="w-full py-6 text-center hover:opacity-90"
+            >Legal</a
+          >
+        </nav>
+      </section>
     </header>
     <main class="mx-auto max-w-4xl">
       <section
         id="hero"
-        class="mb-12 flex scroll-mt-40 flex-col-reverse items-center gap-8 p-6 sm:flex-row"
+        class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center gap-8 p-6 sm:flex-row"
       >
         <article class="sm:w-1/2">
           <h2
@@ -57,7 +89,10 @@
         <img src="./img/cyno.png" alt="cyno" class="w-1/2" />
       </section>
       <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
-      <section class="my-12 scroll-mt-20 p-6" id="skulls">
+      <section
+        class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6"
+        id="skulls"
+      >
         <h2
           class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
         >
@@ -124,7 +159,10 @@
       </section>
       <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-      <section class="my-12 scroll-mt-20 p-6" id="testimonial">
+      <section
+        class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6"
+        id="testimonial"
+      >
         <h2
           class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
         >
@@ -189,7 +227,10 @@
       </section>
       <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-      <section class="my-12 scroll-mt-16 p-6" id="contact">
+      <section
+        class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6"
+        id="contact"
+      >
         <h2
           class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
         >
@@ -210,8 +251,45 @@
             placeholder="Your Subject"
             class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
           />
+          <label for="message">Message:</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            class="w-full resize-none rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
+          ></textarea>
+          <button
+            class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
+          >
+            Submit
+          </button>
         </form>
       </section>
     </main>
+    <footer id="footer" class="bg-teal-700 text-xl text-white">
+      <section
+        class="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between"
+      >
+        <address>
+          <h2>Hasil Gachanya Taufiq</h2>
+          Jalan Poros Bantimurung KM. 7,5 <br />
+          Bantimurung, Kabupaten Maros <br />
+          Email: <a href="mailto:taufiqmck@gmail.com">taufiqmck@gmail.com</a
+          ><br />
+          Phone: <a href="tel:+6283111327306">+6283111327306</a>
+        </address>
+        <nav class="hidden flex-col gap-2 md:flex" aria-label="footer">
+          <a href="#skulls" class="hover:opacity-90">My Result</a>
+          <a href="#testimonial" class="hover:opacity-90">Testimonial</a>
+          <a href="#contact" class="hover:opacity-90">Contact</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">Copyright &copy; <span id="year">2022</span></p>
+          <p class="text-right">All Rights Reserved</p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
